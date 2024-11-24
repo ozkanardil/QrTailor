@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ArticleController.cs" />
+    <Compile Remove="Controllers\CrawLinksController.cs" />
+    <Compile Remove="Controllers\DashboardController.cs" />
+    <Compile Remove="Controllers\DotController.cs" />
+    <Compile Remove="Controllers\LinkController.cs" />
+    <Compile Remove="Controllers\PlatformController.cs" />
+    <Compile Remove="Controllers\RolesController.cs" />
+    <Compile Remove="Controllers\UserRoleController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QrTailor.Application\QrTailor.Application.csproj" />
+  </ItemGroup>
+
+</Project>
